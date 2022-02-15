@@ -1,0 +1,45 @@
+<br>
+<br>
+<div class="row">
+
+  <!-- FORM -->
+  <mat-card>
+    <h1 style="text-align: center;">{{titulo | uppercase}}</h1>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body p-4">
+
+          <!-- FORM -->
+          <form id="formulario"  [formGroup]="dataForm" (ngSubmit)="agregarData() ">
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Nombre</mat-label>
+              <input matInput type="text" class="form-control" formControlName="nombreCliente" required>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>NIT</mat-label>
+              <input matInput type="text" class="form-control" formControlName="nit" required>
+            </mat-form-field>
+
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Fecha de Documento</mat-label>
+              <input matInput class="form-control" formControlName="fechaDocumento" [matDatepicker]="picker" required>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Numero de Cuenta Bancaria</mat-label>
+              <input matInput type="text" class="form-control" formControlName="numeroBancario" required>
+            </mat-form-field>
+
+
+            <button mat-raised-button color="primary" (click)="openSnackBar('El Costumer se guardó satisfactoriamente', 'OK')" [disabled]="dataForm.invalid">Guardar y Generar PDF</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
