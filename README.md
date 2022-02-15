@@ -1,27 +1,43 @@
-# AppPrueba
+# TrustingRisk Prueba Técnica
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+## Indicaciones
 
-## Development server
+_La Aplicación está hecha en su totalidad en TypeScript. Adicionalmente todo está hecho en la misma interfaz a excepción del documento pdf que se abre en otra pestaña diferente_
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
 
-## Code scaffolding
+Allí asignar los siguientes campos dentro del formulario reactivo, ya que todos los campos son requeridos:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+nombreCliente: String
+fechaDocumento: Date
+nit: String
+numeroBancario: String 
+```
 
-## Build
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo._
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+### Pre-requisitos 📋
+_Que se necesita para correr la aplicación correctamente_
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+TypeScript
+Angular
+AngularMaterial
+PdfMake
+```
 
-## Running end-to-end tests
+### Instalación 🔧
+_Aqui una serie de pasos para completar una satistactoria instalacion_
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Frontend
 
-## Further help
+```
+1) npm install
+1.1) ng add @angular/material
+2) ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Autores ✒️
+
+* **Marlon Muete** - *Trabajo total*
